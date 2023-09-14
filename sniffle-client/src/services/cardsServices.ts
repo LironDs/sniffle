@@ -1,6 +1,5 @@
 import axios from "axios";
 import Card from "../interfaces/Card";
-import { json } from "stream/consumers";
 
 export let api: string = `${process.env.REACT_APP_API}/cards`;
 

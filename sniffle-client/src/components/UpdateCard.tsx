@@ -39,7 +39,6 @@ const UpdateCard: FunctionComponent<UpdateCardProps> = () => {
 
   let formik = useFormik({
     initialValues: {
-      // id: card._id,
       userId: card.userId,
       title: card.title,
       subTitle: card.subTitle,
@@ -75,9 +74,6 @@ const UpdateCard: FunctionComponent<UpdateCardProps> = () => {
       zip: yup.number(),
     }),
     onSubmit: (values) => {
-      // let userId: number = JSON.parse(sessionStorage.getItem("userInfo") as string).userId;
-      console.log(typeof String(_id));
-
       updateCard(values, String(_id))
         .then((res) => {
           navigate(-1);

@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const auth = require("../middlewares/auth");
-const joi = require("joi");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+
 const Favorite = require("../models/Favorite");
 const Card = require("../models/Card");
 
@@ -20,7 +18,6 @@ router.post("/", auth, async (req, res) => {
       });
     ///check if card in favCards
     let cardIndex = userFav.favCards.indexOf(req.body._id);
-    console.log("2. cardIndex.............", cardIndex);
 
     // If card is in fav, remove it
     if (cardIndex !== -1) {

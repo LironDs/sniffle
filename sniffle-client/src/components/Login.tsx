@@ -4,7 +4,6 @@ import * as yup from "yup";
 import { checkUser, getTokenDetails } from "../services/usersServices";
 import { useNavigate } from "react-router-dom";
 import { errorMsg, successMsg } from "../services/feedbacksServices";
-import jwt_decode from "jwt-decode";
 import User from "../interfaces/User";
 
 type userLogin = Pick<User, "email" | "password">;
@@ -30,7 +29,6 @@ const Login: FunctionComponent<LoginProps> = ({ setUserInfo, userInfo }) => {
         .then((res) => {
           navigate("/");
           successMsg(`You're logged in as ${values.email}`);
-          console.log("resData:", res.data);
           sessionStorage.setItem(
             "token",
 
@@ -38,8 +36,6 @@ const Login: FunctionComponent<LoginProps> = ({ setUserInfo, userInfo }) => {
               token: res.data,
             })
           );
-
-          console.log(jwt_decode(res.data));
 
           sessionStorage.setItem(
             "userInfo",

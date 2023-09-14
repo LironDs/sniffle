@@ -4,7 +4,6 @@ import * as yup from "yup";
 import { addUser, getTokenDetails } from "../services/usersServices";
 import { useNavigate } from "react-router-dom";
 import { successMsg } from "../services/feedbacksServices";
-import jwt_decode from "jwt-decode";
 
 interface RegisterProps {
   setUserInfo: Function;
@@ -53,8 +52,6 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
       zip: yup.number(),
     }),
     onSubmit(values) {
-      console.log(typeof values.houseNumber);
-
       addUser(values)
         .then((res) => {
           navigate("/");

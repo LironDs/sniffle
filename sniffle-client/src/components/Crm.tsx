@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import User from "../interfaces/User";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { deleteUser, getUsers } from "../services/usersServices";
 import { successMsg } from "../services/feedbacksServices";
 
@@ -9,7 +9,6 @@ interface CrmProps {}
 const Crm: FunctionComponent<CrmProps> = () => {
   let [users, setUsers] = useState<User[]>([]);
   let [usersChanged, setUsersChanged] = useState<boolean>(false);
-  let navigate = useNavigate();
 
   let render = () => {
     setUsersChanged(!usersChanged);

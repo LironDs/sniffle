@@ -1,7 +1,6 @@
 import axios from "axios";
 import User from "../interfaces/User";
 import jwt_decode from "jwt-decode";
-// import _ from "lodash";
 
 let api: string = `${process.env.REACT_APP_API}/users`;
 

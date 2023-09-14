@@ -1,6 +1,5 @@
 import axios from "axios";
 import Card from "../interfaces/Card";
-import Favorite from "../interfaces/Favorite";
 import { successMsg } from "./feedbacksServices";
 
 let api: string = `${process.env.REACT_APP_API}/favorites`;
@@ -16,30 +15,6 @@ export function getFav(userId: string) {
   });
 }
 
-// add to fav / update fav
-// export async function addToFav(userId: string, cardId: string) {
-//   try {
-//     let res = await getFav(userId);
-//     if (res.data.length === 0) {
-//       await createFav(userId);
-//       res = await getFav(userId);
-//     }
-
-//     const cardInFav = res.data[0].favCards.some((card: Card) => card._id === cardId);
-//     if (!cardInFav) {
-//       res.data[0].favCards.push(cardId);
-
-//       successMsg("Card added to favorites.");
-//       return await axios.patch(`${api}/${res.data[0]._id}`, {
-//         favCards: res.data[0].favCards,
-//       });
-//     } else {
-//       successMsg("Card is already in favorites.");
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
 export async function updateFav(cardToAdd: Card) {
   try {
     return await axios.post(api, cardToAdd, {
@@ -69,6 +44,5 @@ export async function addOrRemoveCard(cardToAdd: Card) {
     }
   } catch (error) {
     console.error("An error occurred", error);
-    // Handle errors here
   }
 }

@@ -33,7 +33,6 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo }) => {
     if (window.confirm("Are you sure you want to delete this card?")) {
       deleteCard(card._id as string)
         .then((res) => {
-          console.log(res.data);
           successMsg("Card removed successfully");
 
           render();

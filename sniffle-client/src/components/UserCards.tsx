@@ -17,8 +17,6 @@ const UserCards: FunctionComponent<UserCardsProps> = ({ userInfo }) => {
     setCardsChanged(!cardsChanged);
   };
   useEffect(() => {
-    console.log();
-
     getCardsByUserId(userInfo._id)
       .then((res) => setCards(res.data))
       .catch((err) => console.log(err));
@@ -26,8 +24,6 @@ const UserCards: FunctionComponent<UserCardsProps> = ({ userInfo }) => {
   let handleDelete = (card: Card) => {
     deleteCard(card._id as string)
       .then((res) => {
-        console.log(card._id);
-
         successMsg("Card deleted successfully!");
         render();
       })

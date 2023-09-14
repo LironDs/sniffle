@@ -3,7 +3,6 @@ const router = express.Router();
 const joi = require("joi");
 const Card = require("../models/Card");
 const auth = require("../middlewares/auth");
-const User = require("../models/User");
 
 const cardSchema = joi.object({
   userId: joi.string().required(),
@@ -50,7 +49,6 @@ router.post("/", auth, async (req, res) => {
     ///check if not admin or business user
     const checkUser = req.payload.role;
     if (checkUser === "user") return res.status(400).send("You are not authorized");
-    console.log(req.body);
     // 1. joi validation for body
     const { error } = cardSchema.validate(req.body);
     if (error) return res.status(400).send(error);
@@ -58,7 +56,6 @@ router.post("/", auth, async (req, res) => {
       title: req.body.title,
       subTitle: req.body.subTitle,
     });
-    console.log("test2");
     if (card) return res.status(400).send("Card already exist");
     card = new Card({ userId: req.payload._id, ...req.body });
     await card.save();
@@ -106,8 +103,6 @@ router.delete("/:_id", auth, async (req, res) => {
 
 router.put("/:_id", auth, async (req, res) => {
   try {
-    console.log(req.body);
-
     ///joi validation
     const { error } = cardSchema.validate(req.body);
     if (error) return res.status(400).send(error);

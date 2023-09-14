@@ -1,11 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const joi = require("joi");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const Favorite = require("../models/Favorite");
+
 const User = require("../models/User");
-const card = require("../models/Card");
 const auth = require("../middlewares/auth");
 
 const userSchema = joi.object({
@@ -42,7 +39,6 @@ router.get("/", auth, async (req, res) => {
 ///get user by _id
 router.get("/:_id", auth, async (req, res) => {
   try {
-    console.log(req.params._id);
     ////1. check user details
     const user = await User.findById(req.params._id);
     if (!user) return res.status(400).send("No such user");
@@ -69,7 +65,6 @@ router.put("/:_id", auth, async (req, res) => {
     if (!(req.payload._id === req.params._id || req.payload.role === "admin")) {
       return res.status(403).send("Permission denied");
     }
-    console.log("all OK");
 
     // joi validation for body
 

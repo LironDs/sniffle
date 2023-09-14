@@ -27,10 +27,8 @@ const CardInfo: FunctionComponent<CardInfoProps> = () => {
   });
 
   useEffect(() => {
-    console.log(_id);
     getCardById(String(_id))
       .then((res) => {
-        console.log(res.data);
         setCard(res.data);
       })
       .catch((error) => console.log(error));

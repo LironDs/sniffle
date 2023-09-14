@@ -27,8 +27,6 @@ const userSchema = joi.object({
 router.post("/", async (req, res) => {
   try {
     ///1. joi validation
-    console.log(req.body);
-    console.log(typeof req.body.houseNumber);
 
     const { error } = userSchema.validate(req.body);
 
@@ -38,7 +36,6 @@ router.post("/", async (req, res) => {
     if (user) return res.status(400).send("User already exist");
     ///3.create the user
     user = new User(req.body);
-    console.log(typeof user.houseNumber);
     ///4.encrypt the password
     let salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(user.password, salt);
@@ -55,7 +52,6 @@ router.post("/", async (req, res) => {
       },
       process.env.jwtKey
     );
-    console.log("test");
     ///5. return response with token
     res.status(201).send(token);
   } catch (error) {

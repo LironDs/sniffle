@@ -1,11 +1,7 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import Card from "../interfaces/Card";
 import { addOrRemoveCard, getFav, updateFav } from "../services/favServices";
-import Favorite from "../interfaces/Favorite";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import { successMsg } from "../services/feedbacksServices";
-import { deleteCard } from "../services/cardsServices";
-import { render } from "react-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface FavCardsProps {
   userInfo: any;

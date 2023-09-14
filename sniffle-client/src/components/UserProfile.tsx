@@ -85,13 +85,9 @@ const UserProfile: FunctionComponent<UserProfileProps> = ({ userInfo, setUserInf
       role: yup.string(),
     }),
     onSubmit: (values) => {
-      console.log(String(_id));
-
       updateUser(String(_id), values)
         .then((res) => {
           {
-            console.log("Response from server:", res.data);
-
             navigate("/");
             successMsg("User updated successfully!");
           }
