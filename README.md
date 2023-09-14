@@ -3,7 +3,7 @@
 
 # Hi there!
 
-My name is Liron David-Shiloah and this is my React project.<br>
+My name is Liron David-Shiloah and this is my React+Node.js project.<br>
 It was written as part of a full stack course,
 In this file I have added guidance and notes that will make it easier for you to explore the application.
 ## Lets start-
@@ -14,13 +14,25 @@ In order to run this project on vsc, you will need to run those terminal command
 ```
 npm install
 ```
+## On sniffle-client
 ```
 npm start
 ```
+## On sniffle-server
+
 ```
-json-server --watch db.json --port 8000
+nodemon
 ```
-**The port to be selected when running the server is -8000.**
+
+**In order for the server to connect to MongoDB Atlas, please insert the .env file you received separately.**
+
+### The table below gives you 3 types of users with different permissions,<br> you are welcome to try them all
+
+|      Role      |User                             |Password   |
+|----------------|---------------------------------|-----------|
+|`admin`         |david.liron@gmail.com            |!2345Qwe |
+|`business`      |JohnMcClane@DieHard.com          |!2345Qwe |           
+|`user`          |Ozzy.Osbourne@BlackSabbath.com   |!2345Qwe |
 
 Follow the numbers in the image 
 
