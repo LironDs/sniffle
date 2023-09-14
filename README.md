@@ -24,8 +24,7 @@ json-server --watch db.json --port 8000
 
 Follow the numbers in the image 
 
-
-![Initial screen-Before sign in](<public/images/Home-not signInYet.png>)
+![Initial screen-Before sign in](<sniffle-client/public/images/Home-not signInYet.png>)
 
 On the initial screen of the site you can see all the tickets on the site.
 In the menus above you can do-
@@ -37,7 +36,8 @@ In the menus above you can do-
 6. An "i" button that will appear on every card and will refer to complete information about the business.
 
 ## Register screen-
-![Register screen](public/images/register.png)
+![Register screen](sniffle-client/public/images/register.png)
+
 
 The registration screen contains a lot of information about the customer and except for "state", all the information is required.
 Pay attention to error messages if they appear because they will guide you on how to enter the information.
@@ -50,18 +50,19 @@ If the registration was successful, you will see a message in the corner of the 
 
 
 First screen after sign-in (business User)
-![Business user first screen](public/images/businessUser.png)
+![Business user first screen](sniffle-client/public/images/businessUser.png)
+
 1. after sign-in you will see your name in the navigation bar. If you click it, the screen will change to "update user" screen.
 2. As the button says- "logout"
 3. "My cards"- will show the cards that the current user created on the site (for business users only).
 4. A heart icon - clicking on it will copy the card to the user's favorites list.
 5. My favorites - a screen that will contain the cards that the customer transferred to his list of favorites.
 
-![User update](public/images/updateUser.png)
+![User update](sniffle-client/public/images/updateUser.png)
  In this screen you can modify your data.
 
 ## My cards (Bussiness user only)
- ![user cards](public/images/myCards.png)
+ ![user cards](sniffle-client/public/images/myCards.png)
  A screen where the business user can see the cards he entered into the system
  
 1. Icon of trash can- will delete this card
@@ -72,14 +73,14 @@ First screen after sign-in (business User)
 
 ## My favorites
 
-![My favorites](public/images/myFav.png)
+![My favorites](sniffle-client/public/images/myFav.png)
 each user can choose favorite cards and they will show up here.
 clicking on the heart button will remove the card from this list.
 
 
 
 ## CRM (Admin only)
-![CRM](public/images/crm.png)
+![CRM](sniffle-client/public/images/crm.png)
 
 Only the Admin user can see this link in the navigation bar.
 1. Edit user- will take the admin to update user screen
