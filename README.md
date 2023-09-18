@@ -9,7 +9,7 @@ In this file I have added guidance and notes that will make it easier for you to
 ## Lets start-
 
 **The site is responsive and suitable for viewing on a computer screen, tablet or phone.**<br>
-In order to run this project on vsc, you will need to run those terminal commands-
+In order to run this project on VSC , you will need to run those terminal commands-
 
 ```
 npm install
@@ -26,7 +26,8 @@ nodemon
 
 **In order for the server to connect to MongoDB Atlas, please insert the .env file you received separately.**
 
-### The table below gives you 3 types of users with different permissions,<br> you are welcome to try them all
+
+## The table below gives you 3 types of users with different permissions,<br> you are welcome to try them all. Each user will give you different permission and different menus.
 
 |      Role      |User                             |Password   |
 |----------------|---------------------------------|-----------|
