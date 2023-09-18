@@ -2,7 +2,7 @@ const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const logger = require("morgan");
-
+const chalk = require("chalk");
 const cors = require("cors");
 
 const register = require("./routes/register");
@@ -16,9 +16,10 @@ const app = express();
 const port = process.env.PORT || 10001;
 mongoose
   .connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB connected"))
+  .then(() => console.log(chalk.bgGreen("MongoDB connected")))
   .catch((err) => console.log(err));
-app.listen(port, () => console.log("server started at port: ", port));
+
+app.listen(port, () => console.log(chalk.bgBlue("server started at port: ", port)));
 
 app.use(express.json());
 app.use(cors());

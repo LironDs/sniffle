@@ -1,9 +1,10 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { addUser, getTokenDetails } from "../services/usersServices";
 import { useNavigate } from "react-router-dom";
 import { successMsg } from "../services/feedbacksServices";
+import jwtDecode from "jwt-decode";
 
 interface RegisterProps {
   setUserInfo: Function;
@@ -33,7 +34,7 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
       firstName: yup.string().min(2, "Please enter a valid name").required(),
       middleName: yup.string().min(2),
       lastName: yup.string().min(2, "Please enter a valid name").required(),
-      phone: yup.string().min(6, "Please enter a valid Phone number").required(),
+      phone: yup.string().min(8, "Please enter a valid Phone number").required(),
       email: yup.string().email().required(),
       password: yup
         .string()
@@ -78,6 +79,8 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
   });
   return (
     <>
+      <div id="signInDiv"></div>
+
       <div className="container-fluid col-md-9 p-5">
         {/***** form *******/}
         <form

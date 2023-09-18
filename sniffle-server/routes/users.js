@@ -7,7 +7,7 @@ const auth = require("../middlewares/auth");
 
 const userSchema = joi.object({
   firstName: joi.string().required().min(2),
-  middleName: joi.string().min(2),
+  middleName: joi.string().min(0),
   lastName: joi.string().required().min(2),
   phone: joi.string().required().min(8),
   email: joi.string().required().email().min(2),
@@ -52,8 +52,9 @@ router.get("/:_id", auth, async (req, res) => {
 ///edit userProfile by user or Admin
 router.put("/:_id", auth, async (req, res) => {
   try {
+    console.log(req.body);
     const { error } = userSchema.validate(req.body);
-    if (error) return res.status(400).send("userSchema error");
+    if (error) return res.status(400).send(error);
 
     let userToUpdate = await User.findById(req.params._id);
 

@@ -3,7 +3,7 @@
 
 # Hi there!
 
-My name is Liron David-Shiloah and this is my React project.<br>
+My name is Liron David-Shiloah and this is my React+Node.js project.<br>
 It was written as part of a full stack course,
 In this file I have added guidance and notes that will make it easier for you to explore the application.
 ## Lets start-
