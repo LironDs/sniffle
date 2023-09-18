@@ -27,7 +27,7 @@ nodemon
 **In order for the server to connect to MongoDB Atlas, please insert the .env file you received separately.**
 
 
-## The table below gives you 3 types of users with different permissions,<br> you are welcome to try them all. Each user will give you different permission and different menus.
+#### The table below gives you 3 types of users with different permissions,<br> you are welcome to try them all. <br> Each user will give you different permission and different menus.
 
 |      Role      |User                             |Password   |
 |----------------|---------------------------------|-----------|
