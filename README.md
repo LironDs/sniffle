@@ -1,5 +1,5 @@
 
-![twitter_header_photo_2](https://github.com/LironDs/sniffle/assets/87420425/b228c122-5828-4d7a-b504-dc68f46af66b)
+![twitter_header_photo_2](sniffle-client/public/images/twitter_header_photo_2.png)
 
 # Hi there!
 
