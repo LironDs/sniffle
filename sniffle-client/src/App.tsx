@@ -16,7 +16,6 @@ import Crm from "./components/Crm";
 import FavCards from "./components/FavCards";
 import { ToastContainer } from "react-toastify";
 import PageNotFound404 from "./components/PageNotFound404";
-import jwtDecode from "jwt-decode";
 
 function App() {
   let [userInfo, setUserInfo] = useState(

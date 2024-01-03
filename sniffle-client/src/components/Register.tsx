@@ -59,7 +59,6 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
           successMsg(`You have registered successfully and logged in as ${values.email}`);
           sessionStorage.setItem(
             "token",
-
             JSON.stringify({
               token: res.data,
             })

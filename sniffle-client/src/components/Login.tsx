@@ -52,7 +52,7 @@ const Login: FunctionComponent<LoginProps> = ({ setUserInfo, userInfo }) => {
   });
   return (
     <>
-      <div className="container-fluid col-md-6 p-5">
+      <div className="container col-md-6 p-5">
         {/***** form *******/}
         <form
           className="text-center p-2 border border-info border-5 rounded-3"
@@ -116,10 +116,40 @@ const Login: FunctionComponent<LoginProps> = ({ setUserInfo, userInfo }) => {
           </div>
         </form>
       </div>
+      <div
+        className="container text-center"
+        // style={{ textAlign: "center", position: "fixed", bottom: "70px" }}
+      >
+        <h2>Feel free to register yourself or try one of our users!</h2>
+        <table className="table table-bordered w-50 text-center mx-auto">
+          <thead>
+            <tr className="table-primary">
+              <th className="role">role</th>
+              <th className="mail">E-mail</th>
+              <th className="password">password</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>admin </td>
+              <td>david.liron@gmail.com</td>
+              <td>!2345Qwe</td>
+            </tr>
+            <tr>
+              <td>business </td>
+              <td>JohnMcClane@DieHard.comm </td>
+              <td>!2345Qwe</td>
+            </tr>
+            <tr>
+              <td>user </td>
+              <td>JOzzy.Osbourne@BlackSabbath.com </td>
+              <td>!2345Qwe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </>
   );
-
-  return <>This is Login</>;
 };
 
 export default Login;
