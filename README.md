@@ -104,3 +104,6 @@ Only the Admin user can see this link in the navigation bar.
 # Thank you for reading! <br>
 I hope you enjoyed the tutorial and will leave **constructive comments**! 🙂
 
+ [!IMPORTANT]
+> In order to see the site in action without downloading the files, you can enter this link ➡️ [Netlify Sniffle](https://sniffle.netlify.app/).<br/>
+> The server takes about 60 seconds to connect, so you can click on the link and reload after about a minute.
