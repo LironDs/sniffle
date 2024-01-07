@@ -10,16 +10,15 @@
     "lodash": "^4.17.21",
     "mongodb": "^6.0.0",
     "mongoose": "^7.4.5",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.2"
   },
   "name": "sniffle-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-        "start":"nodemon index.js",
-            "build":"npm i",
-
-
+    "start": "nodemon index.js",
+    "build": "npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
